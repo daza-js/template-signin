@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="ic" href="" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.intertelconversa.com/logo.svg"
+    />
+  </head>
+  <body>
+    <div class="container-fluid h-100">
+      <div class="row row-responsive">
+        <div class="logo-responsive">
+          <img
+            src="https://cdn.intertelconversa.com/logo_conversa_white.svg"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div
+          class="col landscape-info d-none d-md-block align-self-center text-center"
+        >
+          <p class="text-sans-bold text-white">
+            Cualquier momento es <br /><strong class="fw-bold"
+              >bueno para conversar</strong
+            >
+          </p>
+          <div class="mt-4 ms-3">
+            <img
+              src="https://cdn.intertelconversa.com/login_layer.svg"
+              alt=""
+            />
+          </div>
+          <div class="d-md-flex justify-content-center mt-4">
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item border-0 bg-transparent text-light">
+                <i class="bi bi-messenger fs-2"></i>
+              </li>
+              <li class="list-group-item border-0 bg-transparent text-light">
+                <i class="bi bi-instagram fs-2"></i>
+              </li>
+              <li class="list-group-item border-0 bg-transparent text-light">
+                <i class="bi bi-whatsapp fs-2"></i>
+              </li>
+              <li
+                class="list-group-item border-0 bg-transparent text-light d-flex align-items-center"
+              >
+                <img
+                  src="https://cdn.intertelconversa.com/icons/white/conversa.svg"
+                  alt=""
+                  class="img-conversa"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col content-card-responsive">
+          <div class="card h-100 card-responsive border-0">
+            <div class="card-body card-body-responsive">
+              <div class="row">
+                <div class="content">
+                  <div
+                    class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mx-auto text-center"
+                  >
+                    <div class="logo-card mb-5">
+                      <img
+                        src="https://cdn.intertelconversa.com/logo_conversa.svg"
+                        alt=""
+                        class=""
+                      />
+                    </div>
+                    <div id="error-message" class="alert alert-danger"></div>
+                    <form
+                      onsubmit="return false;"
+                      method="post"
+                      class="justify-content-center"
+                    >
+                      <div class="form-group mb-3 text-start">
+                        <label for="name" class="mb-2 text-sans-mid"
+                          >Correo electrónico</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control placeholderConversa"
+                          id="email"
+                          placeholder="nombre@correo.com"
+                        />
+                        <small id="emailHelp" class="form-text text-error"
+                          >El correo electrónico que ingresaste no está
+                          registrado</small
+                        >
+                      </div>
+                      <div class="form-group mb-4 text-start">
+                        <label for="name" class="mb-2 text-sans-mid"
+                          >Contraseña</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control placeholderConversa password-mask"
+                          id="password"
+                          placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+                        />
+                        <small id="emailHelp" class="form-text text-error"
+                          >La contraseña que ingresaste es incorrecta</small
+                        >
+                        <span class="toggle-password">
+                          <i class="bi bi-eye-slash icon-eye-color"></i>
+                        </span>
+                      </div>
+                      <div class="captcha-container form-group"></div>
+                      <div class="d-grid gap-2">
+                        <button
+                          type="submit"
+                          id="btn-login"
+                          class="btn btn-conversa bg-conversa border-0 text-white text-sans-mid-light mb-2"
+                          disabled
+                        >
+                          Acceder
+                        </button>
+                        <button
+                          type="button"
+                          id="btn-google"
+                          class="btn btn-facebook border-0 text-white text-sans-mid-light mb-2"
+                        >
+                          <i class="bi bi-facebook pe-2"></i> Iniciar sesion con
+                          Facebook
+                        </button>
+                        <button
+                          type="button"
+                          id="btn-signup"
+                          class="btn border-0 text-sans-mid"
+                        >
+                          Olvidé mi contraseña
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mb-5">
+              <a href="#" class="text-signUp text-conversa text-sans-mid"
+                >Crear una cuenta nueva</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
+    <script src="https://cdn.auth0.com/js/polyfills/1.0/object-assign.min.js"></script>
+    <script>
+      var togglePassword = document.querySelector(".toggle-password");
+      togglePassword.addEventListener("click", function (event) {
+        var password = document.getElementById("password");
+        event.target.classList.toggle("bi-eye");
+        if (password.classList.contains("password-mask")) {
+          password.classList.remove("password-mask");
+          return;
+        }
+        password.classList.add("password-mask");
+      });
+
+      window.onload = function () {
+        var email = document.getElementById("email");
+        var password = document.getElementById("password");
+        email.addEventListener("keyup", isDisabledButton);
+        password.addEventListener("keyup", isDisabledButton);
+        function isDisabledButton() {
+          if (email.value !== "" && password.value !== "") {
+            document.getElementById("btn-login").disabled = false;
+            return true;
+          }
+          document.getElementById("btn-login").disabled = true;
+          return false;
+        }
+      };
+      window.addEventListener("load", function () {
+        function login(e) {
+          e.preventDefault();
+          var button = this;
+          var username = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+          var errorMessage = document.getElementById("error-message");
+          button.disabled = true;
+          if (username === "" && password === "") {
+            errorMessage.innerHTML = "Ingrese toda la informacion";
+            errorMessage.style.display = "block";
+            return;
+          }
+        }
+
+        // function displayError(err) {
+        //   captcha.reload();
+        //   var errorMessage = document.getElementById("error-message");
+        //   var message = err.policy || err.description;
+        //   console.log("error message", message);
+        //   errorMessage.innerHTML = err.policy || err.description;
+        //   errorMessage.style.display = "block";
+        // }
+
+        document.getElementById("btn-login").addEventListener("click", login);
+      });
+    </script>
+  </body>
+</html>
